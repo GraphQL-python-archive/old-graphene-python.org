@@ -1,13 +1,10 @@
 language: node_js
 sudo: false
 node_js:
-  - "5.11"
+- '5.11'
 cache:
   directories:
-  - .cache/pip/
-  - $HOME/.cache/pip
-  - node_modules/
-  - $HOME/node_modules
+  - node_modules
 install:
 - |
   pip install graphene
@@ -34,3 +31,6 @@ script:
     fi
     exit
   fi
+env:
+  global:
+    secure: cDHFNxSAyNHOebi6E/nNmCoj3s5Z6DXhrxldhbg155JIAbRyLkcKyBc3jpqgRKYv+1PNg3QJ4bngxWbvC+5M78Ft7eCKvDpltsQSIdymTbSRCn7jsmKSu16chHXnisBbAc6d6DCt5SYobiw67Cuv8nDFccON625yqfENgDQ7jrmpc245aZ46zlGaj3osSEVaiuTPWKFhkKhdcdhyTEzb8Mi7WDly/8WNiAOUpEG7CoJmanoqoTNuFeIxINbDSfvu9xQJJyDc2kuqkvUZlQyZ3nBPr0+aBg7DdkJBUs6mEidm3vrOlFbgp2oNgK+YtBMDWEtQkdK7Q9l9ltkpCNndkw9C1wQzAR4JhMdQ+iZ7qvfkrjCthYiMlPwEG+p4/kiieEARjz2GtGad/MWoL/WTktlUVtq7pAZTs9eCtW7CklA/QZYKxTtjpplTDInchho8/AzTfmM6kzJmi6ql3uwsKYDQ9qXERM/13uTfgUFONglacFKpK4YjKXoxl7XjBQoWwjUpn9DX/CXLqcMxtNKqUXLtr7U5OM2KUd0zB+yfbwoOEsMjZNfCZmfMQKw+G+TkEw79MqBJya//ZEvTV+cwdqFwY03sYbQP3J6gw72piht+POnPnWvM6P2l5oJfmsUxVieog8+1Kc5MMF7K3IDoVYPUJkRSG8aHjqKAw+iYcf8=
