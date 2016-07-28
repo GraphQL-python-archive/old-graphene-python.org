@@ -6,8 +6,6 @@ if [ ! -d pypyjs-release-nojit ] ; then
 	git clone https://github.com/pypyjs/pypyjs-release-nojit.git
 fi
 
-pip install graphene
-
 GRAPHENE_DIR="$(python -c "import os; import graphene; print os.path.dirname(graphene.__file__)")"
 GRAPHQL_DIR="$(python -c "import os; import graphql; print os.path.dirname(graphql.__file__)")"
 GRAPHQL_RELAY_DIR="$(python -c "import os; import graphql_relay; print os.path.dirname(graphql_relay.__file__)")"
