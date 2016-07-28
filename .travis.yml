@@ -1,0 +1,36 @@
+language: node_js
+sudo: false
+node_js:
+  - "5.11"
+cache:
+  directories:
+  - .cache/pip/
+  - $HOME/.cache/pip
+  - node_modules/
+  - $HOME/node_modules
+install:
+- |
+  pip install graphene
+script:
+- |
+  if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = false ]; then
+    echo "Building the web."
+    GH_PAGES_DIR="$TRAVIS_BUILD_DIR"/public
+    git config --global user.name "Travis CI"
+    git config --global user.email "travis@graphene-python.org"
+    git clone --branch gh-pages --depth=50 \
+      https://graphql-python-bot@github.com/graphql-python/graphene.git \
+      $GH_PAGES_DIR
+
+    ./playground/graphene-js/build.sh
+    npm run deploy
+    cd $GH_PAGES_DIR
+    git status
+    git add --intent-to-add .
+    if ! git diff-index --quiet HEAD --; then
+      git add -A .
+      git commit -m "Rebuild website"
+      git push "https://${GITHUB_TOKEN}@github.com/graphql-python/graphene.git" gh-pages
+    fi
+    exit
+  fi
