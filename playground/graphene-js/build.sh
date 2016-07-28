@@ -34,4 +34,4 @@ fi
 
 mkdir -p ../../../static/playground
 
-exec ln -s "$lib_dirname/" ../../../static/playground/lib
+exec cp -R "$lib_dirname/" ../../../static/playground/lib
