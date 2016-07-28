@@ -1,5 +1,4 @@
 language: node_js
-sudo: false
 node_js:
 - '5.11'
 cache:
@@ -7,7 +6,7 @@ cache:
   - node_modules
 install:
 - |
-  pip install graphene
+  sudo pip install graphene
 script:
 - |
   if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = false ]; then
