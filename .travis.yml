@@ -16,7 +16,7 @@ script:
     git config --global user.name "Travis CI"
     git config --global user.email "travis@graphene-python.org"
     git clone --branch gh-pages --depth=50 \
-      https://graphql-python-bot@github.com/graphql-python/graphene.git \
+      https://graphql-python-bot@github.com/graphql-python/graphene-python.org.git \
       $GH_PAGES_DIR
 
     ./playground/graphene-js/build.sh
@@ -27,7 +27,7 @@ script:
     if ! git diff-index --quiet HEAD --; then
       git add -A .
       git commit -m "Rebuild website"
-      git push "https://${GITHUB_TOKEN}@github.com/graphql-python/graphene.git" gh-pages
+      git push "https://${GITHUB_TOKEN}@github.com/graphql-python/graphene-python.org.git" gh-pages
     fi
     exit
   fi
