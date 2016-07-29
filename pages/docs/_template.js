@@ -7,7 +7,7 @@ class Template extends React.Component {
   goToPage(event) {
     event.target.blur();
     var page = event.target.value;
-    this.context.router.transitionTo(page);
+    this.context.router.push(page);
   }
   render() {
     var docs = config.docs;
@@ -31,7 +31,7 @@ class Template extends React.Component {
             })}
         </optgroup>;
     });
-    var next_page_index = pages.indexOf(this.props.route.path)+1;
+    var next_page_index = pages.indexOf(this.props.location.pathname)+1;
     var next_page = pages[next_page_index];
     return (
       <div>
@@ -39,7 +39,7 @@ class Template extends React.Component {
         <div className="docs">
           <aside className="docs-aside">
               {aside_links}
-              <select className="docs-aside-navselect" value={this.props.route.path} onChange={this.goToPage.bind(this)}>
+              <select className="docs-aside-navselect" value={this.props.location.pathname} onChange={this.goToPage.bind(this)}>
                   {aside_options}
               </select>
           </aside>
