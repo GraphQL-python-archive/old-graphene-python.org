@@ -119,14 +119,14 @@ schema.query = Query
 
 Unlike a RESTful API, there is only a single URL from which GraphQL is accessed.
 
-We are going to use Flask to create a server that expose the GraphQL schema under `/graphql` and a interface for querying it easily: GraphiQL under `/graphiql`.
+We are going to use Flask to create a server that expose the GraphQL schema under `/graphql` and a interface for querying it easily: GraphiQL (also under `/graphql` when accessed by a browser).
 
 Fortunately for us, the library `Flask-GraphQL` that we previously installed makes this task quite easy.
 
 ```python
 # flask_sqlalchemy/app.py
 from flask import Flask
-from flask_graphql import GraphQL
+from flask_graphql import GraphQLView
 
 from models import db_session
 from schema import schema, Department
@@ -134,8 +134,14 @@ from schema import schema, Department
 app = Flask(__name__)
 app.debug = True
 
-# This is creating the `/graphql` and `/graphiql` endpoints
-GraphQL(app, schema=schema)
+app.add_url_rule(
+    '/graphql',
+    view_func=GraphQLView.as_view(
+        'graphql',
+        schema=schema,
+        graphiql=True # for having the GraphiQL interface
+    )
+)
 
 @app.teardown_appcontext
 def shutdown_session(exception=None):
@@ -180,7 +186,7 @@ $ python ./app.py
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
-Go to [localhost:5000/graphiql](http://localhost:5000/graphiql) and type your first query!
+Go to [localhost:5000/graphql](http://localhost:5000/graphql) and type your first query!
 
 ```graphql
 {
