@@ -14,7 +14,7 @@ class PlaygroundWrapper extends React.Component {
   }
   render() {
     var Current = this.state.currentComponent;
-    return Current?<Current />:null;
+    return Current?<Current {...this.props} />:null;
   }
 }
 

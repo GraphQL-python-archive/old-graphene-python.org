@@ -23,7 +23,6 @@ class Playground extends React.Component {
   componentWillMount() {
     var sourceWasInjected = false;
     var queryParams = this.props.query;
-    console.log(this.context)
     var {
       cacheKey,
       noCache,

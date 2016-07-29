@@ -43,7 +43,7 @@ class Template extends React.Component {
                 <Header />
             </div>:null}
         </header>
-        {this.props.children}
+        {React.cloneElement(this.props.children, {main: true})}
       </div>
     );
   }

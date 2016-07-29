@@ -44,7 +44,7 @@ class Template extends React.Component {
               </select>
           </aside>
           <div className="docs-content">
-              {React.cloneElement(this.props.children, {docs: true})}
+              {this.props.children}
               {next_page?<Link className="docs-next" to={next_page}>Next - {docs_index[next_page].data.title} →</Link>:null}
           </div>
         </div>
