@@ -4068,10 +4068,10 @@
         "graphene.middlewares", 
         "graphene.signals", 
         "inspect", 
-        "graphql.graphql", 
         "graphql.type", 
-        "graphql.utils.schema_printer", 
-        "graphql.utils.introspection_query"
+        "graphql.graphql", 
+        "graphql.utils.introspection_query", 
+        "graphql.utils.schema_printer"
       ]
     }, 
     "graphene.core.types": {
@@ -4221,8 +4221,8 @@
         "graphene.utils.wrap_resolver_function", 
         "inspect", 
         "warnings", 
-        "graphql_relay.node.node", 
         "graphql_relay.connection.arrayconnection", 
+        "graphql_relay.node.node", 
         "six"
       ]
     }, 

@@ -248,8 +248,8 @@
       "pyrepl.python_reader"
     ], 
     "django.conf.settings": [
-      "graphene.contrib.django.filter.filterset", 
-      "graphene.contrib.django.management.commands.graphql_schema"
+      "graphene.contrib.django.management.commands.graphql_schema", 
+      "graphene.contrib.django.filter.filterset"
     ], 
     "django.contrib.postgres.fields.ArrayField": [
       "graphene.contrib.django.compat"
@@ -276,11 +276,11 @@
       "graphene.contrib.django.debug.middleware"
     ], 
     "django.db.models": [
-      "graphene.contrib.django.utils", 
+      "graphene.contrib.django.compat", 
       "graphene.contrib.django.converter", 
       "graphene.contrib.django.types", 
-      "graphene.contrib.django.compat", 
-      "graphene.contrib.django.filter.filterset"
+      "graphene.contrib.django.filter.filterset", 
+      "graphene.contrib.django.utils"
     ], 
     "django.db.models.manager.Manager": [
       "graphene.contrib.django.utils"
@@ -452,13 +452,13 @@
     "promise.Promise": [
       "graphene.utils.promise_middleware", 
       "graphene.contrib.django.debug.middleware", 
-      "graphql.execution.executors.thread", 
       "graphql.execution.executors.gevent", 
+      "graphql.execution.executors.thread", 
       "graphql.execution.executors.process", 
       "graphql.execution.executor", 
-      "graphql_relay.node.plural", 
+      "graphql_relay.mutation.mutation", 
       "graphql_relay.connection.arrayconnection", 
-      "graphql_relay.mutation.mutation"
+      "graphql_relay.node.plural"
     ], 
     "promise.is_thenable": [
       "graphql.execution.executor"
