@@ -61,7 +61,7 @@ If you are using `graphql-django-view` you can access Django's request object
 via `with_context` decorator.
 
 ```python
-from graphene import ObjectType
+from graphene import ObjectType, with_context
 from graphene.contrib.django.filter import DjangoFilterConnectionField
 from .models import Post
 
@@ -93,6 +93,7 @@ In order to add authorization to id-based node access, we need to add a method
 to your `DjangoNode`.
 
 ```python
+from graphene import with_context
 from graphene.contrib.django.types import DjangoNode
 from .models import Post
 
@@ -109,7 +110,7 @@ class PostNode(DjangoNode):
         except Cls._meta.model.DoesNotExist:
             return None
 
-        if post.published or context.user is post.owner:
+        if post.published or context.user == post.owner:
             return Cls(instance)
         else:
             return None
