@@ -6,7 +6,7 @@ cache:
   - node_modules
 install:
 - |
-  sudo pip install graphene
+  sudo pip install "graphene>=1.0.dev"
   npm install
 script:
 - |
