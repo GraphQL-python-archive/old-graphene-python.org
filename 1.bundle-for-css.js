@@ -364,21 +364,23 @@ webpackJsonp([1],Array(476).concat([
 	      if (this.changeTimeout) {
 	        clearTimeout(this.changeTimeout);
 	      }
+
+	      this.changeTimeout = setTimeout(function () {
+	        return _this3.updateSchema();
+	      }, 500);
+	    }
+	  }, {
+	    key: 'updateSchema',
+	    value: function updateSchema() {
+	      var value = this.editor.getValue();
+
 	      if (this.props.onEditSchema) {
-	        var value = this.editor.getValue();
 	        if (value != this.props.initialSchema) {
 	          this.props.onEditSchema(value);
 	        }
 	      }
 
-	      this.changeTimeout = setTimeout(function () {
-	        return _this3.updateSchema();
-	      }, 300);
-	    }
-	  }, {
-	    key: 'updateSchema',
-	    value: function updateSchema() {
-	      this.createSchema(this.editor.getValue());
+	      this.createSchema(value);
 	    }
 	  }, {
 	    key: 'createSchema',
