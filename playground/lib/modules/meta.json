@@ -215,9 +215,6 @@
     "asyncio.wait": [
       "graphql.execution.executors.asyncio"
     ], 
-    "blinker.Signal": [
-      "graphene.signals"
-    ], 
     "bz2": [
       "encodings.bz2_codec", 
       "fileinput", 
@@ -249,80 +246,8 @@
     "cocoasupport.CocoaInteracter": [
       "pyrepl.python_reader"
     ], 
-    "django.conf.settings": [
-      "graphene.contrib.django.management.commands.graphql_schema", 
-      "graphene.contrib.django.filter.filterset"
-    ], 
-    "django.contrib.postgres.fields.ArrayField": [
-      "graphene.contrib.django.compat"
-    ], 
-    "django.contrib.postgres.fields.HStoreField": [
-      "graphene.contrib.django.compat"
-    ], 
-    "django.contrib.postgres.fields.JSONField": [
-      "graphene.contrib.django.compat"
-    ], 
-    "django.contrib.postgres.fields.RangeField": [
-      "graphene.contrib.django.compat"
-    ], 
-    "django.core.exceptions.ValidationError": [
-      "graphene.contrib.django.forms"
-    ], 
-    "django.core.management.base.BaseCommand": [
-      "graphene.contrib.django.management.commands.graphql_schema"
-    ], 
-    "django.core.management.base.CommandError": [
-      "graphene.contrib.django.management.commands.graphql_schema"
-    ], 
-    "django.db.connections": [
-      "graphene.contrib.django.debug.middleware"
-    ], 
-    "django.db.models": [
-      "graphene.contrib.django.compat", 
-      "graphene.contrib.django.converter", 
-      "graphene.contrib.django.types", 
-      "graphene.contrib.django.filter.filterset", 
-      "graphene.contrib.django.utils"
-    ], 
-    "django.db.models.manager.Manager": [
-      "graphene.contrib.django.utils"
-    ], 
-    "django.db.models.query.QuerySet": [
-      "graphene.contrib.django.utils"
-    ], 
-    "django.db.models.related.RelatedObject": [
-      "graphene.contrib.django.compat"
-    ], 
-    "django.forms.fields.BaseTemporalField": [
-      "graphene.contrib.django.form_converter"
-    ], 
-    "django.utils.encoding.force_text": [
-      "graphene.contrib.django.converter", 
-      "graphene.contrib.django.debug.sql.tracking"
-    ], 
-    "django.utils.six": [
-      "graphene.contrib.django.debug.sql.tracking"
-    ], 
-    "django.utils.text.capfirst": [
-      "graphene.contrib.django.filter.filterset"
-    ], 
-    "django.utils.translation.ugettext_lazy": [
-      "graphene.contrib.django.forms"
-    ], 
-    "django_filters": [
-      "graphene.contrib.django.utils"
-    ], 
-    "django_filters.Filter": [
-      "graphene.contrib.django.filter.filterset"
-    ], 
-    "django_filters.MultipleChoiceFilter": [
-      "graphene.contrib.django.filter.filterset"
-    ], 
-    "django_filters.filterset.FilterSet": [
-      "graphene.contrib.django.filter.filterset"
-    ], 
-    "django_filters.filterset.FilterSetMetaclass": [
-      "graphene.contrib.django.filter.filterset"
+    "cyordereddict.OrderedDict": [
+      "graphql.pyutils.ordereddict"
     ], 
     "dl.RTLD_NOW": [
       "distutils.tests.setuptools_build_ext"
@@ -341,15 +266,6 @@
     ], 
     "docutils.utils.Reporter": [
       "distutils.command.check"
-    ], 
-    "enum.Enum": [
-      "graphene.utils.enum"
-    ], 
-    "enum.IntEnum": [
-      "graphene.utils.enum"
-    ], 
-    "enum.unique": [
-      "graphene.utils.enum"
     ], 
     "fcntl": [
       "asyncore", 
@@ -383,9 +299,6 @@
     "gevent": [
       "graphql.execution.executors.gevent"
     ], 
-    "graphql_django_view.GraphQLView": [
-      "graphene.contrib.django.views"
-    ], 
     "hooktestmodule": [
       "test.test_importhooks"
     ], 
@@ -417,7 +330,7 @@
       "test.test_imageop"
     ], 
     "iso8601": [
-      "graphene.core.types.custom_scalars"
+      "graphene.types.datetime"
     ], 
     "macostools": [
       "test.test_macostools"
@@ -538,31 +451,9 @@
       "pyrepl.python_reader", 
       "pyrepl.commands"
     ], 
-    "singledispatch.singledispatch": [
-      "graphene.contrib.django.utils", 
-      "graphene.contrib.sqlalchemy.converter"
-    ], 
     "sitecustomize": [
       "site", 
       "test.test_site"
-    ], 
-    "sqlalchemy.ext.declarative.api.DeclarativeMeta": [
-      "graphene.contrib.sqlalchemy.utils"
-    ], 
-    "sqlalchemy.inspection.inspect": [
-      "graphene.contrib.sqlalchemy.types"
-    ], 
-    "sqlalchemy.orm.exc.NoResultFound": [
-      "graphene.contrib.sqlalchemy.types"
-    ], 
-    "sqlalchemy.orm.interfaces": [
-      "graphene.contrib.sqlalchemy.converter"
-    ], 
-    "sqlalchemy.orm.query.Query": [
-      "graphene.contrib.sqlalchemy.utils"
-    ], 
-    "sqlalchemy_utils.types.choice.ChoiceType": [
-      "graphene.contrib.sqlalchemy.converter"
     ], 
     "strop": [
       "test.test_strop"
