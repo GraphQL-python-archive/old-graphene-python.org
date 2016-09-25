@@ -90,9 +90,10 @@ class TrackResolver(SyncExecutor):
 __graphene_executor = TrackResolver()
 `);
     }).then(() => {
+      this.setState({pypyjs: true});
       this.createSchema(this.props.initialSchema);
     }).then(() => {
-      this.setState({pypyjs: true, response:'"Execute the query for see the results"'});
+      this.setState({response:'"Execute the query for see the results"'});
     });
 
     window.markLine = (lineNo) => {

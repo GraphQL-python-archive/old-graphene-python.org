@@ -25,6 +25,7 @@ eval python tools/module_bundler.py add ./lib/modules "$GRAPHENE_DIR"
 eval python tools/module_bundler.py add ./lib/modules "$GRAPHQL_DIR"
 eval python tools/module_bundler.py add ./lib/modules "$GRAPHQL_RELAY_DIR"
 python tools/module_bundler.py add --include threading ./lib/modules ../threading.py
+python tools/module_bundler.py add --include subprocess ./lib/modules ../subprocess.py
 eval python tools/module_bundler.py add ./lib/modules "$PROMISE_DIR"
 eval python tools/module_bundler.py add ./lib/modules "$SIX_DIR"
 
@@ -33,6 +34,7 @@ python ./tools/module_bundler.py preload ./lib/modules graphene.relay
 python ./tools/module_bundler.py preload ./lib/modules graphql
 python ./tools/module_bundler.py preload ./lib/modules graphql_relay
 python ./tools/module_bundler.py preload ./lib/modules threading
+python ./tools/module_bundler.py preload ./lib/modules subprocess
 python ./tools/module_bundler.py preload ./lib/modules promise
 python ./tools/module_bundler.py preload ./lib/modules six
 
