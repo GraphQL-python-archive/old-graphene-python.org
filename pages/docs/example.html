@@ -1,0 +1,93 @@
+<div class="document">
+  <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+
+
+            <div class="section" id="enums">
+<h1>Enums<a class="headerlink" href="#enums" title="Permalink to this headline">¶</a></h1>
+<p>A <code class="docutils literal"><span class="pre">Enum</span></code> is a special <code class="docutils literal"><span class="pre">GraphQL</span></code> type that represents a set of
+symbolic names (members) bound to unique, constant values.</p>
+<div class="section" id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
+<p>You can create an <code class="docutils literal"><span class="pre">Enum</span></code> using classes:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">graphene</span>
+
+<span class="k">class</span> <span class="nc">Episode</span><span class="p">(</span><span class="n">graphene</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">NEWHOPE</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">EMPIRE</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">JEDI</span> <span class="o">=</span> <span class="mi">6</span>
+</pre></div>
+</div>
+<p>But also using instances of Enum:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span class="n">Episode</span> <span class="o">=</span> <span class="n">graphene</span><span class="o">.</span><span class="n">Enum</span><span class="p">(</span><span class="s">&#39;Episode&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="s">&#39;NEWHOPE&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;EMPIRE&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;JEDI&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="value-descriptions">
+<h2>Value descriptions<a class="headerlink" href="#value-descriptions" title="Permalink to this headline">¶</a></h2>
+<p>It&#8217;s possible to add a description to a enum value, for that the the enum value
+needs to have the <code class="docutils literal"><span class="pre">description</span></code> property on it.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Episode</span><span class="p">(</span><span class="n">graphene</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">NEWHOPE</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">EMPIRE</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">JEDI</span> <span class="o">=</span> <span class="mi">6</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">description</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">Episode</span><span class="o">.</span><span class="n">NEWHOPE</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">&#39;New Hope Episode&#39;</span>
+        <span class="k">return</span> <span class="s">&#39;Other episode&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage-with-python-enums">
+<h2>Usage with Python Enums<a class="headerlink" href="#usage-with-python-enums" title="Permalink to this headline">¶</a></h2>
+<p>In case that the Enums are already defined it&#8217;s possible to reuse them using
+the <code class="docutils literal"><span class="pre">Enum.from_enum</span></code> function.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span class="n">graphene</span><span class="o">.</span><span class="n">Enum</span><span class="o">.</span><span class="n">from_enum</span><span class="p">(</span><span class="n">AlreadyExistingPyEnum</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<p>Internally, <code class="docutils literal"><span class="pre">graphene.Enum</span></code> uses <a href="#id1"><span class="problematic" id="id2">`enum.Enum`_</span></a> Python
+implementation if available, or a backport if not.</p>
+<p>So you can use it in the same way as you would do with Python
+<code class="docutils literal"><span class="pre">enum.Enum</span></code>.</p>
+</div>
+</div>
+<div class="go-buttons">
+<a href="" class="go-previous">Previous</a>
+<a href="" class="go-next">Next</a>
+</div>
+            
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+
+
+      <h3><a href="../index.html">Table Of Contents</a></h3>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Types Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scalars.html">Scalars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces.html">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstracttypes.html">AbstractTypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objecttypes.html">ObjectTypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutations.html">Mutations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../relay/index.html">Relay</a></li>
+</ul>
+
+
+
+    </div>
+  </div>
+
+</div>
+<a href="https://github.com/graphql-python/graphene-python.org/edit/master/docs/pages/404.md" class="improve-document-link">Edit page</a>

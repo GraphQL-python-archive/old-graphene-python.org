@@ -1,16 +1,22 @@
 import graphene
 from graphene import relay, resolve_only_args
 
-class Ship(relay.Node):
+class Ship(graphene.ObjectType):
     '''A ship in the Star Wars saga'''
+    class Meta:
+        interfaces = (relay.Node, )
+
     name = graphene.String(description='The name of the ship.')
 
     @classmethod
-    def get_node(cls, id, info):
+    def get_node(cls, id, context, info):
         return get_ship(id)
 
-class Faction(relay.Node):
+class Faction(graphene.ObjectType):
     '''A faction in the Star Wars saga'''
+    class Meta:
+        interfaces = (relay.Node, )
+
     name = graphene.String(description='The name of the faction.')
     ships = relay.ConnectionField(
         Ship, description='The ships used by the faction.')
@@ -21,7 +27,7 @@ class Faction(relay.Node):
         return [get_ship(ship_id) for ship_id in self.ships]
 
     @classmethod
-    def get_node(cls, id, info):
+    def get_node(cls, id, context, info):
         return get_faction(id)
 
 class IntroduceShip(relay.ClientIDMutation):
@@ -33,7 +39,7 @@ class IntroduceShip(relay.ClientIDMutation):
     faction = graphene.Field(Faction)
 
     @classmethod
-    def mutate_and_get_payload(cls, input, info):
+    def mutate_and_get_payload(cls, input, context, info):
         ship_name = input.get('ship_name')
         faction_id = input.get('faction_id')
         ship = create_ship(ship_name, faction_id)
@@ -44,7 +50,7 @@ class IntroduceShip(relay.ClientIDMutation):
 class Query(graphene.ObjectType):
     rebels = graphene.Field(Faction)
     empire = graphene.Field(Faction)
-    node = relay.NodeField()
+    node = relay.Node.Field()
 
     @resolve_only_args
     def resolve_rebels(self):
@@ -58,9 +64,7 @@ class Query(graphene.ObjectType):
 class Mutation(graphene.ObjectType):
     introduce_ship = graphene.Field(IntroduceShip)
 
-schema = graphene.Schema(name='Starwars Relay Schema')
-schema.query = Query
-schema.mutation = Mutation
+schema = graphene.Schema(query=Query, mutation=Mutation)
 
 xwing = Ship(
     id='1',

@@ -1,0 +1,40 @@
+
+<div class="document">
+  {% block body %}{% endblock %}
+</div>
+{% if github_edit %}
+
+{# https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }} #}
+
+<a href="{{ github_edit }}" class="improve-document-link">Edit page</a>
+{% endif %}
+
+{#
+<div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+
+      <h3><a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></h3>
+      {{ toctree() }}
+
+    </div>
+  </div>
+  <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+
+
+            {{ body }}
+      <div class="go-buttons">
+      {% if prev %}
+      <a href="{{ prev.link|e }}" class="go-previous">Previous: {{ prev.title|striptags|e }}</a>
+      {% endif %}
+      {% if next %}
+      <a href="{{ next.link|e }}" class="go-next">Next: {{ next.title|striptags|e }}</a>
+      {% endif %}
+      </div>
+
+
+          </div>
+        </div>
+      </div>
+#}

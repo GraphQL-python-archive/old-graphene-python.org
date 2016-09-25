@@ -13,22 +13,17 @@ If you think working with Graphene is fun, there are many ways you can contribut
 
 ## Our Repositories
 
--   **GraphQL Core**: [Source Code] - [PyPI package]
--   **GraphQL Relay**: [Source Code][1] - [PyPI package][2]
 -   **Graphene**: [Source Code][3] - [PyPI package][4]
 
-Django integration:
--   **graphql-django-view**: [Source Code][5] - [PyPI package][6]
--   **django-graphiql**: [Source Code][7] - [PyPI package][8]
-
-Flask integration:
+Graphene Integrations:
+-   **graphene-django**: [Source Code][5] - [PyPI package][6]
+-   **graphene-sqlalchemy**: [Source Code][11] - [PyPI package][12]
+-   **graphene-gae**: [Source Code][13] - [PyPI package][14]
 -   **Flask-GraphQL**: [Source Code][9] - [PyPI package][10]
 
-## Other related projects
-
-- [Graphene Todo MVC Example](https://github.com/mickeyinfoshan/graphene_todo) by [@mickeyinfoshan](https://github.com/mickeyinfoshan)
-- [Flask GraphQL Demo](https://github.com/amitsaha/flask-graphql-demo) by [@echorand](https://twitter.com/echorand)
-- [Example GraphQL application](https://github.com/msoedov/flask-graphql-example) by [@msoedov](https://twitter.com/msoedov) with Flask, pypy/python3 and MongoDB (using Docker containers)
+GraphQL internals:
+-   **GraphQL Core**: [Source Code] - [PyPI package]
+-   **GraphQL Relay**: [Source Code][1] - [PyPI package][2]
 
 
   [Source Code]: https://github.com/graphql-python/graphql-core
@@ -37,9 +32,13 @@ Flask integration:
   [2]: https://pypi.python.org/pypi/graphql-relay
   [3]: https://github.com/graphql-python/graphene
   [4]: https://pypi.python.org/pypi/graphene
-  [5]: https://github.com/graphql-python/graphql-django-view
-  [6]: https://pypi.python.org/pypi/graphql-django-view
+  [5]: https://github.com/graphql-python/graphene-django
+  [6]: https://pypi.python.org/pypi/graphene-django
   [7]: https://github.com/graphql-python/django-graphiql
   [8]: https://pypi.python.org/pypi/django-graphiql
   [9]: https://github.com/graphql-python/flask-graphql
   [10]: https://pypi.python.org/pypi/Flask-GraphQL
+  [11]: https://github.com/graphql-python/graphene-sqlalchemy
+  [12]: https://pypi.python.org/pypi/graphene-sqlalchemy
+  [13]: https://github.com/graphql-python/graphene-gae
+  [14]: https://pypi.python.org/pypi/graphene-gae

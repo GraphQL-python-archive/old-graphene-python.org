@@ -2,13 +2,13 @@ import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { config } from 'config'
 
-var DOCS_BASEURL = "https://github.com/graphql-python/graphene/edit/master/docs/pages/";
+var DOCS_BASEURL = "https://github.com/graphql-python/graphene-python.org/edit/master/pages/";
 
 export default class Markdown extends React.Component {
   render() {
-    const post = this.props.route.page.data
+    const post = this.props.route.page.data;
     var pagePath = this.props.route.page.requirePath;
-    var documentUrl = `${DOCS_BASEURL}${pagePath}`;
+    var documentUrl = `${post.base_document_url || DOCS_BASEURL}${pagePath}`;
     var showTitle = post.title && this.props.main;
     return (
       <DocumentTitle title={`${post.title?post.title+' - ':''}${config.siteTitle}`}>
@@ -17,7 +17,7 @@ export default class Markdown extends React.Component {
             <h1>{post.title}</h1>
           </div>:null}
           <div className="markdown">
-            <div className={this.props.main?"wrapper":null} dangerouslySetInnerHTML={{__html: post.body}}/>
+            <div className={(this.props.main && this.props.wrap !== false)?"wrapper":null} dangerouslySetInnerHTML={{__html: post.body}}/>
             <a href={documentUrl} className="improve-document-link">Edit page</a>
           </div>
         </div>

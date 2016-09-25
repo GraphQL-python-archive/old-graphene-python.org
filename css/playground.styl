@@ -3,7 +3,7 @@
 
 .playground
   position absolute
-  top 106px
+  top 0
   left 0
   right 0
   bottom 0
@@ -18,9 +18,50 @@
     bottom 0
     top 0
     z-index 10000
-    background rgba(255,255,255,.6)
+    background rgba(255,255,255,.5)
 
+.graphiql-container .topBarWrap {
+    height: 106px;
+    background-image: linear-gradient(45deg, #ED664C, #DB534C);
+}
+.graphiql-container .topBar, .graphiql-container .docExplorerShow {
+  border-bottom: none
+}
 
+.graphiql-container .docExplorerShow {
+  border-left: none;
+  color: white;
+  &:before {
+    border-color: white;
+  }
+}
+.graphiql-container .execute-button {
+  border-color: #fff;
+  border: 2px solid white;
+  margin-left: 24px;
+  box-sizing: border-box;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  transition: all .2s ease-in-out;
+  &:hover {
+    border-color: white;
+    transform: scale(1.1);
+    path {
+      fill: white;
+    }
+  }
+  &:active {
+    background: rgba(255,255,255,.2);
+  }
+  path {
+    fill: white;
+  }
+}
+.graphiql-container .toolbar-button {
+  color: white;
+  font-weight: 500;
+}
 @css {
   .playground {
     flex-direction: row;
@@ -31,13 +72,16 @@
 }
 
 .playground-schema
-  min-width 400px
-  width 36%
-  border-right 1px solid #E0E0E0
+  
+  min-width 440px
+  width 40%
+  // border-right 1px solid #E0E0E0
+  border-right: 1px solid #333;
   // box-shadow 0 0 8px rgba(0, 0, 0, 0.15)
   position relative
   z-index 100
   display flex
+  box-shadow 0 0 4px rgba(0,0,0,.3)
   
 
   .cm-def
@@ -61,6 +105,7 @@
   .CodeMirror
     font-size: 13px;
     position absolute
+    font-weight 200
     height 100%
     width 100%
     top 0
@@ -68,91 +113,357 @@
     right 0
     bottom 0
     font-family: 'Consolas', 'Inconsolata', 'Droid Sans Mono', 'Monaco', monospace;
-    color: #141823;
+    background: #22242A;
+    color: white;
   .CodeMirror-lines
     padding 20px 0
 
-.playground-schema-header
-  // height 48px
-  // font-family 'Raleway', sans-serif
-  // font-weight 300
-  // line-height 48px
-  // padding 0 10px
-  // border-bottom solid 1px #d0d0d0
-  height: 48px;
-  box-sizing border-box
-  font-family: 'Raleway', sans-serif;
-  color: #999;
-  font-weight: 600;
-  font-size: 12px;
-  text-transform: uppercase;
-  line-height: 52px;
-  padding: 0 12px;
-  border-bottom: solid 1px #d0d0d0;
-  background: #F9F9F9;
+// .playground-schema-header
+//   // height 48px
+//   // font-family 'Raleway', sans-serif
+//   // font-weight 300
+//   // line-height 48px
+//   // padding 0 10px
+//   // border-bottom solid 1px #d0d0d0
+//   height: 48px;
+//   box-sizing border-box
+//   font-family: 'Raleway', sans-serif;
+//   color: #999;
+//   font-weight: 600;
+//   font-size: 12px;
+//   text-transform: uppercase;
+//   line-height: 52px;
+//   padding: 0 12px;
+//   border-bottom: solid 1px #d0d0d0;
+//   background: #F9F9F9;
 
+.playground-schema-header {
+    height: 106px;
+    box-sizing: border-box;
+    font-family: Raleway,sans-serif;
+    color: #999;
+    font-weight: 600;
+    font-size: 12px;
+    padding 32px
+    text-transform: uppercase;
+    // border-bottom: 1px solid #191919;
+    background: #2B2D33;
+    // background-image: linear-gradient(-180deg, #41444C 0%, #2B2D33 100%);
+}
 .playground-graphiql
   flex 1
   height 100%
 
+.playground-page {
+  .bm-burger-button, .bm-menu-wrap, .bm-overlay {
+    display: block;
+  }
+  .bm-burger-button {
+    right: initial;
+    left: 212px;
+    opacity: .35;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
 
-.cm-s-graphene
+// .cm-s-graphene
     
-/* Comment */
-.cm-s-graphene .cm-comment
-  color: #999;
+// /* Comment */
+// .cm-s-graphene .cm-comment
+//   color: #999;
 
-/* Punctuation */
-.cm-s-graphene .cm-punctuation
-  color: #555;
+// /* Punctuation */
+// .cm-s-graphene .cm-punctuation
+//   color: #555;
 
-/* Keyword */
-.cm-s-graphene .cm-keyword
-  // color: #B11A04;
-  // color #D2054E
-  color #a71d5d
+// /* Keyword */
+// .cm-s-graphene .cm-keyword
+//   // color: #B11A04;
+//   // color #D2054E
+//   color #a71d5d
 
-/* OperationName, FragmentName */
-.cm-s-graphene .cm-def
-  // color: #D2054E;
-  color: #1F61A0;
+// /* OperationName, FragmentName */
+// .cm-s-graphene .cm-def
+//   // color: #D2054E;
+//   color: #1F61A0;
 
-/* FieldName */
-.cm-s-graphene .cm-property
-  color: #333;
+// /* FieldName */
+// .cm-s-graphene .cm-property
+//   color: #333;
 
-/* FieldAlias */
-.cm-s-graphene .cm-qualifier
-  color: #1C92A9;
+// /* FieldAlias */
+// .cm-s-graphene .cm-qualifier
+//   color: #1C92A9;
 
-/* ArgumentName and ObjectFieldName */
-.cm-s-graphene .cm-attribute
-  color: #8B2BB9;
+//  ArgumentName and ObjectFieldName 
+// .cm-s-graphene .cm-attribute
+//   color: #8B2BB9;
 
-/* Number */
-.cm-s-graphene .cm-number
-  color: #2882F9;
+// /* Number */
+// .cm-s-graphene .cm-number
+//   color: #2882F9;
 
-/* String */
-.cm-s-graphene .cm-string
-  color: #D64292;
+// /* String */
+// .cm-s-graphene .cm-string
+//   color: #D64292;
 
-/* Boolean */
-.cm-s-graphene .cm-builtin
-  color: #D47509;
+// /* Boolean */
+// .cm-s-graphene .cm-builtin
+//   color: #D47509;
 
-/* EnumValue */
-.cm-s-graphene .cm-string-2
-  color: #0B7FC7;
+// /* EnumValue */
+// .cm-s-graphene .cm-string-2
+//   color: #0B7FC7;
 
-/* Variable */
-.cm-s-graphene .cm-variable
-  color: #333;
+// /* Variable */
+// .cm-s-graphene .cm-variable
+//   color: #333;
 
-/* Directive */
-.cm-s-graphene .cm-meta
-  color: #B33086;
+// /* Directive */
+// .cm-s-graphene .cm-meta
+//   color: #B33086;
 
-/* Type */
-.cm-s-graphene .cm-atom
-  color: #CA9800;
+// /* Type */
+// .cm-s-graphene .cm-atom
+//   color: #CA9800;
+
+// .cm-s-graphene.CodeMirror { background: #0a001f; color: #f8f8f8; }
+
+// .cm-s-graphene {
+//   font-size: 1em;
+//   line-height: 1.5em;
+//   font-family: inconsolata, monospace;
+//   letter-spacing: 0.3px;
+//   word-spacing: 1px;
+//   // background: #1F1F1F;
+//   color: #F1F1F1;
+// }
+// .cm-s-graphene .CodeMirror-lines {
+//   padding: 8px 0;
+// }
+// .cm-s-graphene .CodeMirror-gutters {
+//   box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
+//   -webkit-box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
+//   background-color: #1F1F1F;
+//   // padding-right: 10px;
+//   z-index: 3;
+//   border: none;
+// }
+// .cm-s-graphene div.CodeMirror-cursor {
+//   border-left: 3px solid #F1F1F1;
+// }
+// .cm-s-graphene .CodeMirror-activeline-background {
+//   background: #404040;
+// }
+// .cm-s-graphene .CodeMirror-selected {
+//   background: #73597EE0;
+// }
+// .cm-s-graphene .cm-comment {
+//   color: #8A8988;
+// }
+// .cm-s-graphene .cm-keyword {
+//   color: #FF8C56;
+// }
+// .cm-s-graphene .cm-variable {
+//   color: #389AD9;
+// }
+// .cm-s-graphene .cm-def {
+//   font-style: italic;
+// }
+// .cm-s-graphene .cm-string {
+//   color: #F3F99A;
+// }
+// .cm-s-graphene .cm-variable-2 {
+//   color: #FC8C56;
+// }
+// .cm-s-graphene .cm-property {
+//   color: #FF6666;
+// }
+// .cm-s-graphene .cm-atom {
+//   color: #FF6666;
+// }
+// .cm-s-graphene .cm-number {
+//   color: #FF6666;
+// }
+// .cm-s-graphene .cm-operator {
+//   color: #FF8C56;
+// }
+// .cm-s-graphene .CodeMirror-linenumber {
+//   color: #8A8988;
+// }
+
+.cm-s-graphene {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-family: inconsolata, monospace;
+  letter-spacing: 0.3px;
+  word-spacing: 1px;
+  background: #181818;
+  color: #c4c4c4;
+}
+// .cm-s-graphene .CodeMirror-lines {
+//   padding: 8px 0;
+// }
+// .cm-s-graphene .CodeMirror-gutters {
+//   box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
+//   -webkit-box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
+//   background-color: #181818;
+//   // padding-right: 10px;
+//   z-index: 3;
+//   border: none;
+// }
+// .cm-s-graphene div.CodeMirror-cursor {
+//   border-left: 3px solid #c4c4c4;
+// }
+// .cm-s-graphene .CodeMirror-activeline-background {
+//   background: #020202;
+// }
+// .cm-s-graphene .CodeMirror-selected {
+//   background: #c4c4c4;
+// }
+// .cm-s-graphene .cm-comment {
+//   color: #6a6a6a;
+// }
+// .cm-s-graphene .cm-string {
+//   color: #C59C70;
+// }
+// .cm-s-graphene .cm-number {
+//   color: #6facbe;
+// }
+// .cm-s-graphene .cm-atom {
+//   color: #6facbe;
+// }
+// .cm-s-graphene .cm-keyword {
+//   color: #ca7473;
+// }
+// .cm-s-graphene .cm-variable {
+//   color: white;
+// }
+// .cm-s-graphene .cm-def {
+//   color: #c59c70;
+// }
+// .cm-s-graphene .cm-variable-2 {
+//   color: #ca7473;
+// }
+// .cm-s-graphene .cm-property {
+//   color: #6facbe;
+// }
+// .cm-s-graphene .cm-operator {
+//   color: #ca7473;
+// }
+// .cm-s-graphene .CodeMirror-linenumber {
+//   color: #6a6a6a;
+// }
+
+// .cm-s-graphene {
+//   font-size: 1em;
+//   line-height: 1.5em;
+//   font-family: inconsolata, monospace;
+//   letter-spacing: 0.3px;
+//   word-spacing: 1px;
+//   // background: #272822;
+//   color: #F8F8F2;
+// }
+// .cm-s-graphene .CodeMirror-lines {
+//   padding: 8px 0;
+// }
+// .cm-s-graphene .CodeMirror-gutters {
+//   // box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
+//   background-color: #1e2025;
+//   z-index: 3;
+//   border: none;
+// }
+.cm-s-graphene div.CodeMirror-cursor {
+  border-left: 1px solid #F8F8F2;
+}
+// .cm-s-graphene .CodeMirror-activeline-background {
+//   background: #3E3D32;
+// }
+// .cm-s-graphene .CodeMirror-selected {
+//   background: #49483E;
+// }
+.cm-s-graphene .cm-comment {
+  color: #75715E;
+}
+.cm-s-graphene .cm-string {
+  color: #E6DB74;
+}
+.cm-s-graphene .cm-number {
+  color: #66D9EF;
+}
+.cm-s-graphene .cm-atom {
+  color: #66D9EF;
+}
+.cm-s-graphene .cm-keyword {
+  color: #F92672;
+}
+.cm-s-graphene .cm-variable {
+  color: #A6E22E;
+  color: white;
+}
+.cm-s-graphene .cm-def {
+  // font-style: italic;
+  color: #FD971F;
+  color: white;
+  ~ .cm-variable, ~ .cm-variable ~ .cm-property {
+    color: #A6E22E;
+  }
+  ~ .cm-variable-2, ~ .cm-variable-2 ~ .cm-variable {
+    color: #FD971F;
+  }
+}
+.cm-s-graphene .cm-variable-2 {
+  color: #F92672;
+  color: white;
+}
+.cm-s-graphene .cm-property {
+  color: #66D9EF;
+  color: white;
+}
+.cm-s-graphene .cm-operator {
+  color: #F92672;
+}
+.cm-s-graphene .CodeMirror-linenumber {
+  color: #75715E;
+}
+
+.cm-s-graphene.CodeMirror { background: #22242a; color: #f8f8f2; }
+.cm-s-graphene div.CodeMirror-selected { background: #49483E; }
+.cm-s-graphene .CodeMirror-line::selection, .cm-s-graphene .CodeMirror-line > span::selection, .cm-s-graphene .CodeMirror-line > span > span::selection { background: rgba(73, 72, 62, .99); }
+.cm-s-graphene .CodeMirror-line::-moz-selection, .cm-s-graphene .CodeMirror-line > span::-moz-selection, .cm-s-graphene .CodeMirror-line > span > span::-moz-selection { background: #31343d; }
+.cm-s-graphene .CodeMirror-gutters { background: #1e2025; border-right: 0px; }
+.CodeMirror-gutters { height: 100% !important; }
+.cm-s-graphene .CodeMirror-guttermarker { color: white; }
+.cm-s-graphene .CodeMirror-guttermarker-subtle { color: #d0d0d0; }
+.cm-s-graphene .CodeMirror-linenumber { 
+    color: #414143;
+    text-align: center;
+    border-right: solid 1px #1a1c21;
+}
+.cm-s-graphene .CodeMirror-cursor { border-left: 1px solid #f8f8f0; }
+
+// .cm-s-graphene span.cm-comment { color: #75715e; }
+// .cm-s-graphene span.cm-atom { color: #ae81ff; }
+// .cm-s-graphene span.cm-number { color: #414143; }
+
+// .cm-s-graphene span.cm-property, .cm-s-graphene span.cm-attribute { color: #a6e22e; }
+// .cm-s-graphene span.cm-keyword { color: #f92672; }
+// .cm-s-graphene span.cm-string { color: #e6db74; }
+
+// .cm-s-graphene span.cm-variable { color: #f8f8f2; }
+// .cm-s-graphene span.cm-variable-2 { color: #9effff; }
+// .cm-s-graphene span.cm-variable-3 { color: #66d9ef; }
+// .cm-s-graphene span.cm-def { color: #fd971f; }
+// .cm-s-graphene span.cm-bracket { color: #f8f8f2; }
+// .cm-s-graphene span.cm-tag { color: #a6353c; }
+// .cm-s-graphene span.cm-header { color: #ae81ff; }
+// .cm-s-graphene span.cm-link { color: #ae81ff; }
+// .cm-s-graphene span.cm-error { background: #f92672; color: #f8f8f0; }
+
+.cm-s-graphene .CodeMirror-activeline-background { background: #373831; }
+.cm-s-graphene .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}

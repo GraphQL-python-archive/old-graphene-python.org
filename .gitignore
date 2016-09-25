@@ -1,6 +1,8 @@
 node_modules/
-public/
+public/*
 .gatsby-context.js
 
 /playground/graphene-js/pypyjs-release-nojit/
 /static/playground
+
+*.pyc

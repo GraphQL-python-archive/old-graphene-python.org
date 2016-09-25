@@ -99,29 +99,35 @@ class Playground extends React.Component {
       queryParams = {};
     }
     this.changeParams(queryParams);
-    this.state = {initialSchema, initialQuery, sourceWasInjected};
+    this.state = {initialSchema, query: initialQuery, sourceWasInjected};
     this.queryParams = queryParams;
   }
-  shouldComponentUpdate() {
-    return false;
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('shouldComponentUpdate', this.props.query, nextProps.query);
+    return this.props.query.schema != nextProps.query.schema;
   }
   changeParams(queryParams) {
     var router = this.context.router;
     var routeName = this.props.pathname;
     var params = this.props.params;
-    queryParams = _.mapValues(queryParams, encodeURIComponent);
-    router.replace(routeName, params, queryParams);
+    // this.queryParams = queryParams;
+    // queryParams = _.mapValues(queryParams, encodeURIComponent);
+    // console.log({pathname: routeName, query:params, state: queryParams})
+    router.replace({pathname: routeName, query:queryParams});
   }
   render() {
+    console.log('render');
     return (<GraphenePlayground
       initialSchema={this.state.initialSchema}
-      initialQuery={this.state.initialQuery}
+      query={this.state.query}
       onEditSchema={(source) => {
         localStorage.setItem(this.schemaCacheKey, source);
         if (this.cacheKey === DEFAULT_CACHE_KEY) {
+          console.log('onEditSchema', this.queryParams, this.props.query)
           this.queryParams.schema = source;
+
           if (!this.queryParams.query) {
-            this.queryParams.query = this.state.initialQuery;
+            this.queryParams.query = this.state.query;
           }
           this.changeParams(this.queryParams);
         }
@@ -130,6 +136,8 @@ class Playground extends React.Component {
         localStorage.setItem(this.queryCacheKey, source);
         if (this.cacheKey === DEFAULT_CACHE_KEY) {
           this.queryParams.query = source;
+          this.state.query = source;
+          console.log('onEditQuery', this.queryParams, this.props.query)
           if (!this.queryParams.schema) {
             this.queryParams.schema = this.state.initialSchema;
           }
@@ -143,7 +151,7 @@ class Playground extends React.Component {
 
 
 Playground.contextTypes = {
-  router: React.PropTypes.func
+  router: React.PropTypes.object
 };
 
 module.exports = Playground;

@@ -1,7 +1,7 @@
 siteTitle = "Graphene"
 ga = "UA-12613282-7"
 
-linkPrefix = ""
+linkPrefix = "http://graphene-python.org"
 baseColor = "#884499"
 
 [docs.quickstart]

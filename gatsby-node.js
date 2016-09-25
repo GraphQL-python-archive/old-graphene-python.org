@@ -53,9 +53,10 @@ exports.modifyWebpackConfig = function(config, env) {
   if (IS_STATIC) {
     config.plugin('extract-css', ExtractTextPlugin, ["app.css"]);
   }
-  config.plugin('static', CopyWebpackPlugin, [[{ from: '../static/**/*'}]]);
+  config.plugin('static', CopyWebpackPlugin, [[{ from: './static/**/*'}]]);
   config.plugin('define-env', webpack.DefinePlugin, [{
     "ENV": JSON.stringify(env),
+    "process.env.BROWSER": JSON.stringify(true),
     "PUBLIC_PATH": JSON.stringify(publicPath),
   }]);
   // if (env != "static") {

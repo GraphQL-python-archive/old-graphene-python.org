@@ -1,4 +1,4 @@
-#graphiql-container {
+.graphiql-container {
   color: #141823;
   width: 100%;
   display: -webkit-flex;
@@ -10,7 +10,7 @@
   font-size: 14px;
 }
 
-#graphiql-container .editorWrap {
+.graphiql-container .editorWrap {
   display: -webkit-flex;
   display:         flex;
   -webkit-flex-direction: column;
@@ -19,17 +19,17 @@
           flex: 1;
 }
 
-#graphiql-container .title {
+.graphiql-container .title {
   display: none;
   font-size: 18px;
 }
 
-#graphiql-container .title em {
+.graphiql-container .title em {
   font-family: georgia;
   font-size: 19px;
 }
 
-#graphiql-container .topBarWrap {
+.graphiql-container .topBarWrap {
   display: -webkit-flex;
   display:         flex;
   -webkit-flex-direction: row;
@@ -38,7 +38,7 @@
   height: 48px;
 }
 
-#graphiql-container .topBar {
+.graphiql-container .topBar {
   border-bottom: solid 1px #d0d0d0;
   cursor: default;
   -webkit-user-select: none;
@@ -53,7 +53,7 @@
           align-items: center;
 }
 
-#graphiql-container .docExplorerShow {
+.graphiql-container .docExplorerShow {
   background: transparent;
   border: none;
   border-bottom: solid 1px #d0d0d0;
@@ -65,7 +65,7 @@
   padding: 2px 20px 0 18px;
 }
 
-#graphiql-container .docExplorerShow:before {
+.graphiql-container .docExplorerShow:before {
   border-left: 2px solid #3B5998;
   border-top: 2px solid #3B5998;
   content: '';
@@ -78,7 +78,7 @@
           transform: rotate(-45deg);
 }
 
-#graphiql-container .editorBar {
+.graphiql-container .editorBar {
   display: -webkit-flex;
   display:         flex;
   -webkit-flex-direction: row;
@@ -87,7 +87,7 @@
           flex: 1;
 }
 
-#graphiql-container .queryWrap {
+.graphiql-container .queryWrap {
   display: -webkit-flex;
   display:         flex;
   -webkit-flex-direction: column;
@@ -96,7 +96,7 @@
           flex: 1;
 }
 
-#graphiql-container .resultWrap {
+.graphiql-container .resultWrap {
   position: relative;
   display: -webkit-flex;
   display:         flex;
@@ -107,14 +107,14 @@
   border-left: solid 1px #e0e0e0;
 }
 
-#graphiql-container .docExplorerWrap {
+.graphiql-container .docExplorerWrap {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
   z-index: 3;
   position: relative;
   background: white;
 }
 
-#graphiql-container .docExplorerResizer {
+.graphiql-container .docExplorerResizer {
   cursor: col-resize;
   height: 100%;
   left: -5px;
@@ -124,20 +124,20 @@
   z-index: 10;
 }
 
-#graphiql-container .docExplorerHide {
+.graphiql-container .docExplorerHide {
   cursor: pointer;
   font-size: 18px;
   margin: -7px -8px -6px 0;
   padding: 18px 16px 15px 12px;
 }
 
-#graphiql-container .query-editor {
+.graphiql-container .query-editor {
   -webkit-flex: 1;
           flex: 1;
   position: relative;
 }
 
-#graphiql-container .variable-editor {
+.graphiql-container .variable-editor {
   height: 30px;
   display: -webkit-flex;
   display:         flex;
@@ -146,7 +146,7 @@
   position: relative;
 }
 
-#graphiql-container .variable-editor-title {
+.graphiql-container .variable-editor-title {
   background: #eeeeee;
   border-bottom: solid 1px #d6d6d6;
   border-top: solid 1px #e0e0e0;
@@ -161,19 +161,19 @@
           user-select: none;
 }
 
-#graphiql-container .codemirrorWrap {
+.graphiql-container .codemirrorWrap {
   -webkit-flex: 1;
           flex: 1;
   position: relative;
 }
 
-#graphiql-container .result-window {
+.graphiql-container .result-window {
   -webkit-flex: 1;
           flex: 1;
   position: relative;
 }
 
-#graphiql-container .footer {
+.graphiql-container .footer {
   background: #f6f7f8;
   border-left: solid 1px #e0e0e0;
   border-top: solid 1px #e0e0e0;
@@ -181,7 +181,7 @@
   position: relative;
 }
 
-#graphiql-container .footer:before {
+.graphiql-container .footer:before {
   background: #eeeeee;
   bottom: 0;
   content: " ";
@@ -191,23 +191,23 @@
   width: 12px;
 }
 
-#graphiql-container .result-window .CodeMirror {
+.graphiql-container .result-window .CodeMirror {
   background: #f6f7f8;
 }
 
-#graphiql-container .result-window .CodeMirror-gutters {
+.graphiql-container .result-window .CodeMirror-gutters {
   background-color: #eeeeee;
   border-color: #e0e0e0;
   cursor: col-resize;
 }
 
-#graphiql-container .result-window .CodeMirror-foldgutter,
-#graphiql-container .result-window .CodeMirror-foldgutter-open:after,
-#graphiql-container .result-window .CodeMirror-foldgutter-folded:after {
+.graphiql-container .result-window .CodeMirror-foldgutter,
+.graphiql-container .result-window .CodeMirror-foldgutter-open:after,
+.graphiql-container .result-window .CodeMirror-foldgutter-folded:after {
   padding-left: 3px;
 }
 
-#graphiql-container .execute-button {
+.graphiql-container .execute-button {
   background: transparent;
   border: solid 1px #777;
   border-radius: 17px;
@@ -218,33 +218,33 @@
   padding: 0;
   width: 34px;
 }
-#graphiql-container .execute-button path {
+.graphiql-container .execute-button path {
   fill: #777;
 }
-#graphiql-container .execute-button:hover {
+.graphiql-container .execute-button:hover {
   border-color: #333;
 }
-#graphiql-container .execute-button:hover path {
+.graphiql-container .execute-button:hover path {
   fill: #333;
 }
 
-#graphiql-container .execute-button:active {
+.graphiql-container .execute-button:active {
   background: white;
   border-color: #db594c;
 }
-#graphiql-container .execute-button:active path {
+.graphiql-container .execute-button:active path {
   fill: #db594c;
 }
 
-#graphiql-container .execute-button:focus {
+.graphiql-container .execute-button:focus {
   outline: 0;
 }
 
-#graphiql-container .CodeMirror-scroll {
+.graphiql-container .CodeMirror-scroll {
   -webkit-overflow-scrolling: touch;
 }
 
-#graphiql-container .CodeMirror {
+.graphiql-container .CodeMirror {
   position: absolute;
   top: 0;
   left: 0;
@@ -255,7 +255,7 @@
   color: #141823;
 }
 
-#graphiql-container .CodeMirror-lines {
+.graphiql-container .CodeMirror-lines {
   padding: 20px 0;
 }
 
@@ -362,7 +362,7 @@ div.CodeMirror-lint-message-error, div.CodeMirror-lint-message-warning {
 
 /* COLORS */
 
-#graphiql-container .CodeMirror-foldmarker {
+.graphiql-container .CodeMirror-foldmarker {
   border-radius: 4px;
   background: #08f;
   background: -webkit-linear-gradient(#43A8FF, #0F83E8);
@@ -380,82 +380,82 @@ div.CodeMirror-lint-message-error, div.CodeMirror-lint-message-warning {
   text-shadow: 0 -1px rgba(0, 0, 0, 0.1);
 }
 
-#graphiql-container div.CodeMirror span.CodeMirror-matchingbracket {
+.graphiql-container div.CodeMirror span.CodeMirror-matchingbracket {
   color: #555;
   text-decoration: underline;
 }
 
-#graphiql-container div.CodeMirror span.CodeMirror-nonmatchingbracket {
+.graphiql-container div.CodeMirror span.CodeMirror-nonmatchingbracket {
   color: #f00;
 }
 
 /* Comment */
-#graphiql-container .cm-comment {
+.graphiql-container .cm-comment {
   color: #999;
 }
 
 /* Punctuation */
-#graphiql-container .cm-punctuation {
+.graphiql-container .cm-punctuation {
   color: #555;
 }
 
 /* Keyword */
-#graphiql-container .cm-keyword {
+.graphiql-container .cm-keyword {
   color: #B11A04;
 }
 
 /* OperationName, FragmentName */
-#graphiql-container .cm-def {
+.graphiql-container .cm-def {
   color: #D2054E;
 }
 
 /* FieldName */
-#graphiql-container .cm-property {
+.graphiql-container .cm-property {
   color: #1F61A0;
 }
 
 /* FieldAlias */
-#graphiql-container .cm-qualifier {
+.graphiql-container .cm-qualifier {
   color: #1C92A9;
 }
 
 /* ArgumentName and ObjectFieldName */
-#graphiql-container .cm-attribute {
+.graphiql-container .cm-attribute {
   color: #8B2BB9;
 }
 
 /* Number */
-#graphiql-container .cm-number {
+.graphiql-container .cm-number {
   color: #2882F9;
 }
 
 /* String */
-#graphiql-container .cm-string {
+.graphiql-container .cm-string {
   color: #D64292;
 }
 
 /* Boolean */
-#graphiql-container .cm-builtin {
+.graphiql-container .cm-builtin {
   color: #D47509;
 }
 
 /* EnumValue */
-#graphiql-container .cm-string-2 {
+.graphiql-container .cm-string-2 {
   color: #0B7FC7;
 }
 
 /* Variable */
-#graphiql-container .cm-variable {
+.graphiql-container .cm-variable {
   color: #397D13;
 }
 
 /* Directive */
-#graphiql-container .cm-meta {
+.graphiql-container .cm-meta {
   color: #B33086;
 }
 
 /* Type */
-#graphiql-container .cm-atom {
+.graphiql-container .cm-atom {
   color: #CA9800;
 }
 /* BASICS */
@@ -783,11 +783,11 @@ div.CodeMirror-cursors {
 
 /* Help users use markselection to safely style text background */
 span.CodeMirror-selectedtext { background: none; }
-#graphiql-container .doc-explorer {
+.graphiql-container .doc-explorer {
   background: white;
 }
 
-#graphiql-container .doc-explorer-title-bar {
+.graphiql-container .doc-explorer-title-bar {
   cursor: default;
   display: -webkit-flex;
   display: flex;
@@ -799,7 +799,7 @@ span.CodeMirror-selectedtext { background: none; }
           user-select: none;
 }
 
-#graphiql-container .doc-explorer-title {
+.graphiql-container .doc-explorer-title {
   padding: 10px 0 10px 10px;
   font-weight: bold;
   text-align: center;
@@ -810,7 +810,7 @@ span.CodeMirror-selectedtext { background: none; }
           flex: 1;
 }
 
-#graphiql-container .doc-explorer-back {
+.graphiql-container .doc-explorer-back {
   color: #3B5998;
   cursor: pointer;
   margin: -7px 0 -6px -8px;
@@ -820,7 +820,7 @@ span.CodeMirror-selectedtext { background: none; }
   white-space: nowrap;
 }
 
-#graphiql-container .doc-explorer-back:before {
+.graphiql-container .doc-explorer-back:before {
   border-left: 2px solid #3B5998;
   border-top: 2px solid #3B5998;
   content: '';
@@ -833,11 +833,11 @@ span.CodeMirror-selectedtext { background: none; }
           transform: rotate(-45deg);
 }
 
-#graphiql-container .doc-explorer-rhs {
+.graphiql-container .doc-explorer-rhs {
   position: relative;
 }
 
-#graphiql-container .doc-explorer-contents {
+.graphiql-container .doc-explorer-contents {
   background-color: #ffffff;
   border-top: 1px solid #d6d6d6;
   bottom: 0;
@@ -850,29 +850,29 @@ span.CodeMirror-selectedtext { background: none; }
   top: 47px;
 }
 
-#graphiql-container .doc-type-description p:first-child ,
-#graphiql-container .doc-type-description blockquote:first-child {
+.graphiql-container .doc-type-description p:first-child ,
+.graphiql-container .doc-type-description blockquote:first-child {
   margin-top: 0;
 }
 
-#graphiql-container .doc-explorer-contents a {
+.graphiql-container .doc-explorer-contents a {
   cursor: pointer;
   text-decoration: none;
 }
 
-#graphiql-container .doc-explorer-contents a:hover {
+.graphiql-container .doc-explorer-contents a:hover {
   text-decoration: underline;
 }
 
-#graphiql-container .doc-value-description {
+.graphiql-container .doc-value-description {
   padding: 4px 0 8px 12px;
 }
 
-#graphiql-container .doc-category {
+.graphiql-container .doc-category {
   margin: 20px 0;
 }
 
-#graphiql-container .doc-category-title {
+.graphiql-container .doc-category-title {
   border-bottom: 1px solid #e0e0e0;
   color: #777;
   cursor: default;
@@ -886,36 +886,36 @@ span.CodeMirror-selectedtext { background: none; }
           user-select: none;
 }
 
-#graphiql-container .doc-category-item {
+.graphiql-container .doc-category-item {
   margin: 12px 0;
   color: #555;
 }
 
-#graphiql-container .keyword {
+.graphiql-container .keyword {
   color: #B11A04;
 }
 
-#graphiql-container .type-name {
+.graphiql-container .type-name {
   color: #CA9800;
 }
 
-#graphiql-container .field-name {
+.graphiql-container .field-name {
   color: #1F61A0;
 }
 
-#graphiql-container .value-name {
+.graphiql-container .value-name {
   color: #0B7FC7;
 }
 
-#graphiql-container .arg-name {
+.graphiql-container .arg-name {
   color: #8B2BB9;
 }
 
-#graphiql-container .arg:after {
+.graphiql-container .arg:after {
   content: ', ';
 }
 
-#graphiql-container .arg:last-child:after {
+.graphiql-container .arg:last-child:after {
   content: '';
 }
 .CodeMirror-foldmarker {
@@ -1011,7 +1011,7 @@ span.CodeMirror-selectedtext { background: none; }
   background-position: right bottom;
   width: 100%; height: 100%;
 }
-#graphiql-container .spinner-container {
+.graphiql-container .spinner-container {
   position: absolute;
   top: 50%;
   height: 36px;
@@ -1021,7 +1021,7 @@ span.CodeMirror-selectedtext { background: none; }
   z-index: 10;
 }
 
-#graphiql-container .spinner {
+.graphiql-container .spinner {
   vertical-align: middle;
   display: inline-block;
   height: 24px;
