@@ -118,19 +118,21 @@ __graphene_executor = TrackResolver()
     if (this.changeTimeout) {
       clearTimeout(this.changeTimeout);
     }
-    if (this.props.onEditSchema) {
-      var value = this.editor.getValue();
-      if (value != this.props.initialSchema) {
-        this.props.onEditSchema(value)
-      }
-    }
 
     this.changeTimeout = setTimeout(() =>
       this.updateSchema()
-    , 300);
+    , 500);
   }
   updateSchema() {
-    this.createSchema(this.editor.getValue());
+    var value = this.editor.getValue();
+
+    if (this.props.onEditSchema) {
+      if (value != this.props.initialSchema) {
+        this.props.onEditSchema(value);
+      }
+    }
+
+    this.createSchema(value);
   }
   createSchema(code) {
     if (this.previousCode == code) return;
