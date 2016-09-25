@@ -332,9 +332,10 @@ webpackJsonp([1],Array(476).concat([
 	      this.pypyjs = this.pypy_interpreter.ready().then(function () {
 	        return _this2.pypy_interpreter.exec('\nimport graphene\nimport js\nfrom graphql.execution.executors.sync import SyncExecutor\nfrom graphql.error import GraphQLError, format_error\n\ndef get_wrapped(f):\n    if hasattr(f, \'func_closure\') and f.func_closure:\n        return get_wrapped(f.func_closure[0].cell_contents)\n    return f\n\nclass TrackResolver(SyncExecutor):\n    @staticmethod\n    def execute(fn, *args, **kwargs):\n        if fn.__module__ == \'__main__\':\n            line = get_wrapped(fn).func_code.co_firstlineno\n            js.globals.markLine(line-2)\n        return fn(*args, **kwargs)\n\n__graphene_executor = TrackResolver()\n');
 	      }).then(function () {
+	        _this2.setState({ pypyjs: true });
 	        _this2.createSchema(_this2.props.initialSchema);
 	      }).then(function () {
-	        _this2.setState({ pypyjs: true, response: '"Execute the query for see the results"' });
+	        _this2.setState({ response: '"Execute the query for see the results"' });
 	      });
 
 	      window.markLine = function (lineNo) {

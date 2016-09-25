@@ -12,7 +12,6 @@
     "cffi", 
     "_ffi", 
     "_rawffi", 
-    "subprocess", 
     "_subprocess", 
     "thread", 
     "multiprocessing", 
