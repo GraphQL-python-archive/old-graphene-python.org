@@ -14,7 +14,6 @@
     "_rawffi", 
     "subprocess", 
     "_subprocess", 
-    "threading", 
     "thread", 
     "multiprocessing", 
     "_multiprocessing", 
@@ -199,16 +198,19 @@
       "test.test_repr"
     ], 
     "asyncio.Future": [
-      "graphql.execution.executors.asyncio"
+      "graphql.execution.executors.asyncio", 
+      "promise.compat"
     ], 
     "asyncio.ensure_future": [
-      "graphql.execution.executors.asyncio"
+      "graphql.execution.executors.asyncio", 
+      "promise.compat"
     ], 
     "asyncio.get_event_loop": [
       "graphql.execution.executors.asyncio"
     ], 
     "asyncio.iscoroutine": [
-      "graphql.execution.executors.asyncio"
+      "graphql.execution.executors.asyncio", 
+      "promise.compat"
     ], 
     "asyncio.wait": [
       "graphql.execution.executors.asyncio"
@@ -448,26 +450,6 @@
     ], 
     "pip": [
       "ensurepip.__init__"
-    ], 
-    "promise.Promise": [
-      "graphene.utils.promise_middleware", 
-      "graphene.contrib.django.debug.middleware", 
-      "graphql.execution.executors.gevent", 
-      "graphql.execution.executors.thread", 
-      "graphql.execution.executors.process", 
-      "graphql.execution.executor", 
-      "graphql_relay.mutation.mutation", 
-      "graphql_relay.connection.arrayconnection", 
-      "graphql_relay.node.plural"
-    ], 
-    "promise.is_thenable": [
-      "graphql.execution.executor"
-    ], 
-    "promise.promise_for_dict": [
-      "graphql.execution.executor"
-    ], 
-    "promise.promisify": [
-      "graphql.execution.executor"
     ], 
     "py": [
       "ctypes_config_cache.rebuild"
