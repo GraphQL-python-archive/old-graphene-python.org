@@ -1,14 +1,14 @@
 ---
 layout: page
-title: "Graphene 1.0 - Production ready!"
+title: "Graphene 1.0 - Production Ready!"
 description: "Released the version 1.0 of Graphene"
 ---
 
 Graphene is now one year old!
-We have a lot of news for all the GraphQL enthusiats in Python.
+We have a lot of news for all the Python GraphQL enthusiats.
 
 
-For celebrating the first year of Graphene, we are lunching the next
+To celebrate the first year of Graphene, we are lunching the next
 and **production-ready** version of graphene... `v1.0`! It's already being
 used in more than 30 companies in production, don't be shy and give it a try!
 
