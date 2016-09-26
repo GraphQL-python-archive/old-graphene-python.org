@@ -1,5 +1,7 @@
 ---
 path: /
+title: "Graphene"
+description: "GraphQL Framework for Python"
 ---
 <div class="intro">
 
