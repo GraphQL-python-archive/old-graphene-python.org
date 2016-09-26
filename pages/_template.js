@@ -15,7 +15,7 @@ if (!process.env.BROWSER) {
 }
 
 const ADOM = (props) =>
-    <a href={`http://graphene-python.org/${props.to}`} {...props} />
+    <a href={`http://graphene-python.org${props.to}`} {...props} />
 
 class Template extends React.Component {
   render() {
