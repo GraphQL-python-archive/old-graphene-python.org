@@ -1,5 +1,5 @@
-{%- extends "base.html" %}
-{% block body %}
+{%- extends "./base.html" %}
+{% block content %}
   <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
     <div class="sphinxsidebarwrapper">
 
@@ -13,7 +13,7 @@
           <div class="body" role="main">
 
 
-            {{ body }}
+            {% block body %} {% endblock %}
       <div class="go-buttons">
       {% if prev %}
       <a href="{{ prev.link|e }}" class="go-previous">Previous: {{ prev.title|striptags|e }}</a>
