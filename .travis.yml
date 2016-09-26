@@ -13,11 +13,16 @@ script:
   if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = false ]; then
     echo "Building the web."
     GH_PAGES_DIR="$TRAVIS_BUILD_DIR"/public
+    GH_DOCS_DIR="$TRAVIS_BUILD_DIR"/docs
     git config --global user.name "Travis CI"
     git config --global user.email "travis@graphene-python.org"
     git clone --branch gh-pages --depth=50 \
       https://graphql-python-bot@github.com/graphql-python/graphene-python.org.git \
       $GH_PAGES_DIR
+
+    git clone --branch docs --depth=50 \
+      https://graphql-python-bot@github.com/graphql-python/graphene-python.org.git \
+      $GH_DOCS_DIR
 
     ./playground/graphene-js/build.sh
     npm run build
@@ -29,6 +34,18 @@ script:
       git commit -m "Rebuild website"
       git push "https://${GITHUB_TOKEN}@github.com/graphql-python/graphene-python.org.git" gh-pages
     fi
+
+    DOCS_PACKAGE_DIR="$GH_DOCS_DIR"/sphinx_graphene_theme/
+    DOCS_PACKAGE_STATIC="$DOCS_PACKAGE_DIR"/static/
+
+    # Updating template docs
+    cp app.css $DOCS_PACKAGE_STATIC
+    cp bundle.js $DOCS_PACKAGE_STATIC
+    cp bundle.js.map $DOCS_PACKAGE_STATIC
+    cp docs_template.html $DOCS_PACKAGE_DIR
+
+    
+
     exit
   fi
 env:
