@@ -15,12 +15,12 @@ used in more than 30 companies in production, don't be shy and give it a try!
 
 But, what are the main changes of this **[new shiny version](https://github.com/graphql-python/graphene/)**?
 
-## All Integrations in different Repos
+## All Integrations In Different Repos
 
 Now all the integrations are separated from the core Graphene codebase.
 
-By isolating each Graphene integration into its own repo, now we are
-able to iterate in each separately, apart of handling better the permission roles
+By isolating each Graphene integration into its own repo, we are now
+able to iterate in each separately, apart from handling the permission roles better
 for maintainers and contributors. **We are really excited about this!**
 
   - [Graphene-Django](https://github.com/graphql-python/graphene-django/)
@@ -35,23 +35,23 @@ Also, the **documentation is now isolated** in each repo and generated using *Sp
 Ok, it's hard to do a maintainable Python package based in the in the
 syntactic sugar magic behind the metaclasses.
 
-But we did major efforts to improve the abstractions that will let us handle
-better the cases and minimize any future bugs.
+But we made a major effort to improve the abstractions that will let us handle
+the cases better and minimize any future bugs.
 
-What we mean with "better abstractions"?
+What do we mean by "better abstractions"?
 
- - **Inheriting a interface** now have to be done explicitly, by adding it into the Meta, not by subclassing.
-   This help to better scope of the logic of a ObjectType and Interface, handled by separate.
- - The **schema is no longer aware of it's execution and middleware**, therefore this logic be living
+ - **Inheriting an interface** now has to be done explicitly, by adding it into the Meta, not by subclassing.
+   This helps to better scope of the logic of an ObjectType and Interface, handled by separate.
+ - The **schema is no longer aware of it's execution and middleware**, therefore this logic will be
    living on the context of the execution rather than the schema.
  - The GraphQL native types are generated in one step using a **TypeMap when creating the schema**, and graphene
    now doesn't interpose with the GraphQL types. This helps us achieve much cleaner code
    and code parallization easier.
- - The **Graphene-Django integration is now full grown up**, the GraphQL and GraphiQL views are now bundled into the package
+ - The **Graphene-Django integration is now fully grown**, the GraphQL and GraphiQL views are now bundled into the package
    requiring much less integration effort for the developer.
  - Better and faster testing.
  - [Promises in Python](https://github.com/syrusakbary/promise)! This simplifies by a huge
-   marging how we have to handle paralization in different environments while preserving the syntax.
+   margin how we have to handle paralization in different environments while preserving the syntax.
    PS: This feature was actually available since `v0.8`, but any emphasize is not enough!
  - Versioning [like a pro](https://github.com/graphql-python/graphene/blob/master/graphene/pyutils/version.py)!
 
@@ -59,7 +59,7 @@ Please **check the [Upgrade Guide to 1.0](https://github.com/graphql-python/grap
 
 ## 20x Speed Improvement
 
-The first version of Graphene had some **severe speed issues** when performed against quite large datasets
+The first version of Graphene had some **speed issues** when returning large datasets
 (100k+ elements).
 
 By removing unnecessary abstractions, resolution wrappers and adding
@@ -70,8 +70,8 @@ a simple caching mechanism in the function resolution discovery **we achieved
 But that's not all... [we are working to increase it another 10-50x](https://github.com/graphql-python/graphene/issues/268#issuecomment-245507085)! (That's a total
 of **100x-1000x faster** of what it was!).
 
-We would de able to achieve this by adding an extra step after the query AST generation that will decide in build
-time (instead of runtime, as it is now) what are the type resolvers that the query have to use! (plus Cython, when possible)
+We would be able to achieve this by adding an extra step after the query AST generation that will decide in build
+time (instead of runtime, as it is now) what type resolvers the query have to use! (plus Cython, when possible)
 
 Don't be worried though, Graphene `1.0` it's super fast... we just want to be as fast as Protocol Buffers
 or CapN Proto!
@@ -103,13 +103,13 @@ With the plus of the [playground redesign](/playground/)!
 
 ## Extra: Downloads
 
-Graphene it's been **installed more than 50.000 times** in its first year, and **just about 10.000 the last month**.
+Graphene has now been **installed more than 50.000 times** in its first year, and **just about 10.000 the last month**.
 This number is actually low compared to what we aim to achieve in the upcoming years.
 <br><br>
 
 Hope you all enjoy this new version as I enjoyed the road with all of you :)
 
-Let Graphene be with you!
+May Graphene be with you!
 
 <br>
 Thanks,<br>Syrus Akbary
