@@ -1,0 +1,11 @@
+*.pyc
+*.egg-info
+*.egg
+*build/
+.tox
+.coverage
+*.DS_Store
+dist/
+bower_components/
+node_modules/
+npm-debug.log
