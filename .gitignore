@@ -9,3 +9,5 @@ dist/
 bower_components/
 node_modules/
 npm-debug.log
+public/
+.gatsby-context.js
