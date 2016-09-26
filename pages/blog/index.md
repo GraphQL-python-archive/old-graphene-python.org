@@ -6,4 +6,4 @@ description: "Graphene Blog"
 
 # Latest news:
 
-* [Graphene is now production ready!](/blog/graphene-production-ready/)
+* [Graphene 1.0 - Production ready!](/blog/graphene-production-ready/)

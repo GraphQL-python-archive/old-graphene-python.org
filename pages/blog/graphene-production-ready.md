@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Graphene is now production ready!"
+title: "Graphene 1.0 - Production ready!"
 description: "Released the version 1.0 of Graphene"
 ---
 
