@@ -3,7 +3,7 @@ From https://github.com/graphql-python/graphene-python.org.
 """
 import os
 
-__version__ = '0.1.10-alpha'
+__version__ = '0.1.11'
 __version_full__ = __version__
 
 
