@@ -49,6 +49,11 @@ script:
     git status
     git add --intent-to-add .
     if ! git diff-index --quiet HEAD --; then
+      cd $DOCS_PACKAGE_DIR
+      # This updates the version
+      sed -r 's/(.*)(__version__\s*=\s*'\''[0-9]\.)([0-9]+)(.*)/echo "\1\2$((\3+1))\4"/ge' __init__.py > __init__.py
+
+      cd $GH_DOCS_DIR
       git add -A .
       git commit -m "Rebuild docs"
       git push "https://${GITHUB_TOKEN}@github.com/graphql-python/graphene-python.org.git" docs
