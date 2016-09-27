@@ -1,4 +1,3 @@
-
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,200,100&.css);/**
  * GitHub Gist Theme
  * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
@@ -1054,7 +1053,11 @@ body.body--docs {
 }
 .markdown p + ul,
 .documentwrapper p + ul {
-  margin-top: -0.6em;
+  margin-top: -0.4em;
+}
+.markdown li,
+.documentwrapper li {
+  margin: 0.4em 0;
 }
 .markdown code,
 .documentwrapper code {
