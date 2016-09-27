@@ -25,8 +25,8 @@ export default class Html extends React.Component {
         </head>
         <body className={classnames({'body--docs':isDocs})}>
           <div id="react-mount" dangerouslySetInnerHTML={{__html: this.props.body}} />
-          <script src={prefixLink("/bundle.js")}/>
           {isDocs?<script dangerouslySetInnerHTML={{__html: `window.isDocs = true;`}} />:null}
+          <script src={prefixLink("/bundle.js")}/>
           {isDocs?<div id="docs" dangerouslySetInnerHTML={{__html: docsTemplate.body}} />:null}
           {config.ga?<script dangerouslySetInnerHTML={{__html: `
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
