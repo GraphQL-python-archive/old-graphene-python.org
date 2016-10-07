@@ -6,7 +6,7 @@ description: "GraphQL Framework for Python"
 
 * ![watch](./watch.png)
   ## Easy and quick
-  Getting started with Graphene is incredible easy. You will enjoy creating new APIs.
+  Getting started with Graphene is incredibly easy. You will enjoy creating new APIs.
 * ![pencil](./pencil.png)
   ## Declarative
   Query responses are decided by the client rather than the server. A GraphQL query returns exactly what a client asks for and no more.
@@ -21,7 +21,7 @@ description: "GraphQL Framework for Python"
 
 # Explore a better way of creating APIs
 
-Graphene is a Python library for building APIs with GraphQL easily. But, what is GraphQL? GraphQL is a data query language developed internally by Facebook in 2012 before being publicly released in 2015. It provides an alternate to REST and ad-hoc webservice architectures.
+Graphene is a Python library for building APIs with GraphQL easily. But, what is GraphQL? GraphQL is a data query language developed internally by Facebook in 2012 before being publicly released in 2015. It provides an alternative to REST and ad-hoc webservice architectures.
 
 We believe that GraphQL is the next big thing after peanut butter and REST.
 </div>
