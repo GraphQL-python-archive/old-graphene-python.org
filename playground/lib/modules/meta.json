@@ -538,6 +538,27 @@
     "twisted.internet.reactor": [
       "pyrepl.python_reader"
     ], 
+    "typing.Any": [
+      "promise.promise"
+    ], 
+    "typing.Callable": [
+      "promise.promise"
+    ], 
+    "typing.Dict": [
+      "promise.promise"
+    ], 
+    "typing.Iterator": [
+      "promise.promise"
+    ], 
+    "typing.Optional": [
+      "promise.promise"
+    ], 
+    "typing.Tuple": [
+      "promise.promise"
+    ], 
+    "typing.Union": [
+      "promise.promise"
+    ], 
     "usercustomize": [
       "site"
     ], 
