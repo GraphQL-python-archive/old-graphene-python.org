@@ -385,6 +385,7 @@ body.body--docs {
   letter-spacing: 0.4px;
   line-height: 15px;
   border: 1px solid #fff;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: 12px 18px;
   z-index: 111;
@@ -410,6 +411,7 @@ body.body--docs {
   -o-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   width: 100%;
   height: 100%;
@@ -630,6 +632,7 @@ body.body--docs {
   content: '';
   width: 5px;
   height: 5px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
   display: block;
   position: absolute;
@@ -715,6 +718,7 @@ body.body--docs {
   margin-bottom: -188px;
   background: #2b2d33;
   padding-top: 38px;
+  -webkit-border-radius: 4px;
   border-radius: 4px;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.36);
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.36);
@@ -851,6 +855,7 @@ body.body--docs {
   top: -100px;
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+  -webkit-border-radius: 100px;
   border-radius: 100px;
   font-size: 13px;
   padding: 17px 17px 17px 71px;
@@ -910,6 +915,7 @@ body.body--docs {
   transform-origin: 100% 100%;
   background: #999;
   border: 1px solid #919191;
+  -webkit-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
   border-bottom: 0;
   padding: 9px 12px 12px 34px;
@@ -1041,6 +1047,7 @@ body.body--docs {
 .documentwrapper ul code {
   background: #fafafa;
   padding: 2px 4px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   border: 1px solid #ccc;
   color: #000;
@@ -1521,6 +1528,7 @@ body.body--docs {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.23);
   box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.23);
@@ -1620,6 +1628,7 @@ body.body--docs {
   border: 1px solid #e55d4c;
   margin-top: 10px;
   float: left;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   font-size: 14px;
   padding: 6px 12px;
@@ -2920,6 +2929,7 @@ li.CodeMirror-hint-active {
   box-sizing: border-box;
   width: 36px;
   height: 36px;
+  -webkit-border-radius: 100%;
   border-radius: 100%;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -2982,6 +2992,7 @@ li.CodeMirror-hint-active {
 .playground-schema .activeline .cm-def,
 .playground-schema .activeline .cm-variable + .cm-keyword {
   background: #d7d3f1;
+  -webkit-border-radius: 1px;
   border-radius: 1px;
   -webkit-box-shadow: 0 0 0 2px #d7d3f1;
   box-shadow: 0 0 0 2px #d7d3f1;
