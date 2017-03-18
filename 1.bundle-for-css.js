@@ -453,9 +453,8 @@ webpackJsonp([1],Array(489).concat([
 	      var _this6 = this;
 
 	      // console.log('execute', query);
-	      var json_variables = variables ? JSON.stringify(variables) : '{}';
 	      return this.pypyjs.then(function () {
-	        var x = '\nimport json\nvariables = json.loads(\'\'\'' + json_variables + '\'\'\')\nresult = schema.execute(\'\'\'' + query + '\'\'\', variable_values=variables, executor=__graphene_executor)\nresult_dict = {};\nif result.errors:\n  result_dict[\'errors\'] = [format_error(e) for e in result.errors]\nif result.data:\n  result_dict[\'data\'] = result.data\nresult_json = json.dumps(result_dict)\n';
+	        var x = '\nimport json\nvariables = json.loads(\'\'\'' + variables + '\'\'\')\nresult = schema.execute(\'\'\'' + query + '\'\'\', variable_values=variables, executor=__graphene_executor)\nresult_dict = {};\nif result.errors:\n  result_dict[\'errors\'] = [format_error(e) for e in result.errors]\nif result.data:\n  result_dict[\'data\'] = result.data\nresult_json = json.dumps(result_dict)\n';
 	        return _this6.pypy_interpreter.exec(x);
 	      }).then(function () {
 	        return _this6.pypy_interpreter.get('result_json');
