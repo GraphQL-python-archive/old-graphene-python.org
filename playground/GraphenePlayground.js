@@ -189,11 +189,10 @@ assert schema, 'You have to define a schema'
   }
   execute(query, variables) {
     // console.log('execute', query);
-    var json_variables = variables?JSON.stringify(variables):'{}';
     return this.pypyjs.then(() => {
       var x = `
 import json
-variables = json.loads('''${json_variables}''')
+variables = json.loads('''${variables}''')
 result = schema.execute('''${query}''', variable_values=variables, executor=__graphene_executor)
 result_dict = {};
 if result.errors:
