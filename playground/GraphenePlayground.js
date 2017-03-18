@@ -185,14 +185,16 @@ assert schema, 'You have to define a schema'
     if (!this.validSchema) {
       return badSchemaFetcher(arguments);
     }
-    return this.execute(graphQLParams.query);
+    return this.execute(graphQLParams.query, graphQLParams.variables);
   }
-  execute(query) {
+  execute(query, variables) {
     // console.log('execute', query);
+    var json_variables = variables?JSON.stringify(variables):'{}';
     return this.pypyjs.then(() => {
       var x = `
 import json
-result = schema.execute('''${query}''', executor=__graphene_executor)
+variables = json.loads('''${json_variables}''')
+result = schema.execute('''${query}''', variable_values=variables, executor=__graphene_executor)
 result_dict = {};
 if result.errors:
   result_dict['errors'] = [format_error(e) for e in result.errors]
