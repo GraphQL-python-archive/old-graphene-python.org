@@ -532,7 +532,7 @@ pypyjs.prototype.exec = function exec(code) {
       }).bind(this))
     }
     // Now we can execute the code in custom top-level scope.
-    code = 'exec \'\'\'' + _escape(code) + '\'\'\' in top_level_scope';
+    var code = 'exec \'\'\'' + _escape(code) + '\'\'\' in top_level_scope';
     p = p.then((function() {
       return this._execute_source(code);
     }).bind(this));
@@ -553,7 +553,7 @@ pypyjs.prototype.exec = function exec(code) {
 pypyjs.prototype.eval = function eval(expr) {
   return this._ready.then((function() {
     // First try to execute it as an expression.
-    code = "r = eval('" + _escape(expr) + "', top_level_scope)";
+    var code = "r = eval('" + _escape(expr) + "', top_level_scope)";
     return this._execute_source(code);
   }).bind(this)).then(
     (function() {
