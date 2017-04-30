@@ -6,6 +6,7 @@ cache:
   - node_modules
 install:
 - |
+  sudo pip install https://github.com/syrusakbary/promise/archive/master.zip --upgrade
   sudo pip install "graphene>=1.0.dev"
   npm install
 script:
