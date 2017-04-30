@@ -196,6 +196,24 @@
     "areallylongpackageandmodulenametotestreprtruncation.areallylongpackageandmodulenametotestreprtruncation.qux": [
       "test.test_repr"
     ], 
+    "asyncio.Future": [
+      "graphql.execution.executors.asyncio", 
+      "promise.compat"
+    ], 
+    "asyncio.ensure_future": [
+      "graphql.execution.executors.asyncio", 
+      "promise.compat"
+    ], 
+    "asyncio.get_event_loop": [
+      "graphql.execution.executors.asyncio"
+    ], 
+    "asyncio.iscoroutine": [
+      "graphql.execution.executors.asyncio", 
+      "promise.compat"
+    ], 
+    "asyncio.wait": [
+      "graphql.execution.executors.asyncio"
+    ], 
     "bz2": [
       "encodings.bz2_codec", 
       "fileinput", 
@@ -226,6 +244,9 @@
     ], 
     "cocoasupport.CocoaInteracter": [
       "pyrepl.python_reader"
+    ], 
+    "cyordereddict.OrderedDict": [
+      "graphql.pyutils.ordereddict"
     ], 
     "dl.RTLD_NOW": [
       "distutils.tests.setuptools_build_ext"
@@ -274,6 +295,9 @@
       "platform", 
       "test.leakers.test_gestalt"
     ], 
+    "gevent": [
+      "graphql.execution.executors.gevent"
+    ], 
     "hooktestmodule": [
       "test.test_importhooks"
     ], 
@@ -303,6 +327,9 @@
     ], 
     "imgfile": [
       "test.test_imageop"
+    ], 
+    "iso8601": [
+      "graphene.types.datetime"
     ], 
     "macostools": [
       "test.test_macostools"
