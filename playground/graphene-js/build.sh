@@ -3,7 +3,7 @@
 cd "$(dirname "$0")"
 
 if [ ! -d pypyjs-release-nojit ] ; then
-    git clone https://github.com/pypyjs/pypyjs-release-nojit.git
+    git clone https://github.com/syrusakbary/pypyjs-release-nojit.git
 else
     cd pypyjs-release-nojit
     rm -rf ./lib/modules
