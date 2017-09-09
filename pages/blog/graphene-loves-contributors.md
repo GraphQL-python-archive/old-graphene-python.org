@@ -7,6 +7,7 @@ description: "Graphene loves contributors, and is seeking for help. Would you jo
 Since I started working on *Graphene*, *Graphene-Django* and *Graphene-SQLAlchemy* the **support** from the community **has been amazing**.
 
 As time passes, it's been increasingly hard for me to focus enough time on each of these projects.
+
 Last weeks I've been quite occupied trying to **optimize the GraphQL engine** in Python (news to come soon!), **subscriptions** and the latest version of Graphene: **2.0**.
 Unfortunately I haven't been able to keep the same pace in all the graphene sub-projects: *Graphene-Django*, *Graphene-SQLAlchemy* and *Graphene-GAE*.
 
