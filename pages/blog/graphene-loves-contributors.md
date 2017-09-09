@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Graphene ❤️ Contributors"
-description: "Graphene started"
+description: "Graphene loves contributors, and is seeking for help. Would you join us? :)"
 ---
 
 Since I started working on *Graphene*, *Graphene-Django* and *Graphene-SQLAlchemy* the **support** from the community **has been amazing**.
@@ -20,7 +20,7 @@ I'm pleased to welcome **Jacob Foster** into the Graphene-Django community as an
 
 He will start making sure that every issue and PR gets reviewed on time and future work is organized with Github Projects.
 
-You can find him on twitter in @spockNinja, and in Github: 
+You can find him on [Github as @spockNinja](https://github.com/spockNinja).
 
 ## Want to contribute?
 
