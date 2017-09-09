@@ -8,10 +8,11 @@ Since I started working on *Graphene*, *Graphene-Django* and *Graphene-SQLAlchem
 
 As time passes, it's been increasingly hard for me to focus enough time on each of these projects.
 
-Last weeks I've been quite occupied trying to **optimize the GraphQL engine** in Python (news to come soon!), **subscriptions** and the latest version of Graphene: **2.0**.
+For the last few weeks I've been quite occupied trying to **optimize the GraphQL engine** in Python (news to come soon!), **GraphQL subscriptions** and the latest version of Graphene: **2.0**.
 Unfortunately I haven't been able to keep the same pace in all the graphene sub-projects: *Graphene-Django*, *Graphene-SQLAlchemy* and *Graphene-GAE*.
 
-Because of that I decided that it is time to start delegating to people that can spend the time required to make each of these projects shine.
+Because of that I decided that it is time to start delegating people that can spend the time required to make each of these projects shine.
+
 **While I will still be active on all this projects**, all contributors are going to ensure that each of the projects evolve in the *right direction* and at a *good pace*.
 
 
