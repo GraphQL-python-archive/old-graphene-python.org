@@ -196,6 +196,9 @@
     "areallylongpackageandmodulenametotestreprtruncation.areallylongpackageandmodulenametotestreprtruncation.qux": [
       "test.test_repr"
     ], 
+    "asyncio.Event": [
+      "promise.schedulers.asyncio"
+    ], 
     "asyncio.Future": [
       "graphql.execution.executors.asyncio", 
       "promise.compat"
@@ -205,7 +208,8 @@
       "promise.compat"
     ], 
     "asyncio.get_event_loop": [
-      "graphql.execution.executors.asyncio"
+      "graphql.execution.executors.asyncio", 
+      "promise.schedulers.asyncio"
     ], 
     "asyncio.iscoroutine": [
       "graphql.execution.executors.asyncio", 
@@ -266,6 +270,9 @@
     "docutils.utils.Reporter": [
       "distutils.command.check"
     ], 
+    "enum.Enum": [
+      "graphene.pyutils.compat"
+    ], 
     "fcntl": [
       "asyncore", 
       "mailbox", 
@@ -296,7 +303,11 @@
       "test.leakers.test_gestalt"
     ], 
     "gevent": [
-      "graphql.execution.executors.gevent"
+      "graphql.execution.executors.gevent", 
+      "promise.schedulers.gevent"
+    ], 
+    "gevent.event.Event": [
+      "promise.schedulers.gevent"
     ], 
     "hooktestmodule": [
       "test.test_importhooks"
@@ -366,6 +377,9 @@
     "py": [
       "ctypes_config_cache.rebuild"
     ], 
+    "py.test.raises": [
+      "graphql.type.tests.test_definition"
+    ], 
     "pyexpat": [
       "xml.etree.ElementTree"
     ], 
@@ -378,6 +392,48 @@
     "pygame.locals.*": [
       "pyrepl.pygame_keymap", 
       "pyrepl.pygame_console"
+    ], 
+    "pytest": [
+      "graphene.utils.tests.test_deprecated", 
+      "graphene.utils.tests.test_annotate", 
+      "graphene.types.tests.test_mutation", 
+      "graphene.types.tests.test_structures", 
+      "graphene.types.tests.test_field", 
+      "graphene.types.tests.test_union", 
+      "graphene.types.tests.test_objecttype", 
+      "graphene.types.tests.test_schema", 
+      "graphene.types.tests.test_argument", 
+      "graphene.types.tests.test_base", 
+      "graphene.types.tests.test_abstracttype", 
+      "graphene.tests.issues.test_356", 
+      "graphene.relay.tests.test_mutation", 
+      "graphene.relay.tests.test_connection", 
+      "graphql.execution.tests.test_dataloader", 
+      "graphql.execution.tests.test_executor_asyncio", 
+      "graphql.execution.tests.test_executor_gevent", 
+      "graphql.type.tests.test_serialization", 
+      "graphql.error.tests.test_base"
+    ], 
+    "pytest.raises": [
+      "graphene.utils.tests.test_module_loading", 
+      "graphql.language.tests.test_printer", 
+      "graphql.language.tests.test_parser", 
+      "graphql.language.tests.test_schema_parser", 
+      "graphql.language.tests.test_lexer", 
+      "graphql.language.tests.test_schema_printer", 
+      "graphql.utils.tests.test_build_client_schema", 
+      "graphql.utils.tests.test_build_ast_schema", 
+      "graphql.utils.tests.test_quoted_or_list", 
+      "graphql.utils.tests.test_extend_schema", 
+      "graphql.pyutils.tests.test_default_ordered_dict", 
+      "graphql.execution.tests.test_variables", 
+      "graphql.execution.tests.test_executor", 
+      "graphql.type.tests.test_validation", 
+      "graphql.type.tests.test_schema", 
+      "graphql.type.tests.test_enum_type"
+    ], 
+    "pytz": [
+      "graphene.types.tests.test_datetime"
     ], 
     "reloadmodule": [
       "test.test_importhooks"
