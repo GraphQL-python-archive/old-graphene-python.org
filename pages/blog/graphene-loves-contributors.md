@@ -13,7 +13,7 @@ Unfortunately I haven't been able to keep the same pace in all the graphene sub-
 
 Because of that I decided that it is time to start delegating people that can spend the time required to make each of these projects shine.
 
-**While I will still be active on all this projects**, all contributors are going to ensure that each of the projects evolve in the *right direction* and at a *good pace*.
+**While I will still be active on all these projects**, all contributors are going to ensure that each of the projects evolve in the *right direction* and at a *good pace*.
 
 
 ## New Graphene-Django contributor: Jacob Foster
